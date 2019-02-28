@@ -1,55 +1,102 @@
-# normalize.css v3
+# normalize.css
 
-Normalize.css is a customisable CSS file that makes browsers render all
-elements more consistently and in line with modern standards.
+<a href="https://github.com/necolas/normalize.css"><img
+  src="https://necolas.github.io/normalize.css/logo.svg" alt="Normalize Logo"
+  width="80" height="80" align="right"></a>
 
-The project relies on researching the differences between default browser
-styles in order to precisely target only the styles that need or benefit from
-normalizing.
+> A modern alternative to CSS resets
 
-[View the test file](http://necolas.github.io/normalize.css/latest/test.html)
+[![npm][npm-image]][npm-url] [![license][license-image]][license-url]
+[![changelog][changelog-image]][changelog-url]
+[![gitter][gitter-image]][gitter-url]
 
-## Install
 
-Download from the [project page](http://necolas.github.io/normalize.css/).
+**NPM**
 
-Install with [Bower](http://bower.io/): `bower install --save normalize-css`
+```sh
+npm install --save normalize.css
+```
 
-Install with [Component(1)](http://component.io/): `component install necolas/normalize.css`
+**CDN**
+
+See https://yarnpkg.com/en/package/normalize.css
+
+**Download**
+
+See https://necolas.github.io/normalize.css/latest/normalize.css
+
 
 ## What does it do?
 
 * Preserves useful defaults, unlike many CSS resets.
 * Normalizes styles for a wide range of elements.
 * Corrects bugs and common browser inconsistencies.
-* Improves usability with subtle improvements.
+* Improves usability with subtle modifications.
 * Explains what code does using detailed comments.
 
-## How to use it
-
-No other styles should come before Normalize.css.
-
-It is recommended that you include the `normalize.css` file as untouched
-library code.
 
 ## Browser support
 
-* Google Chrome (latest)
-* Mozilla Firefox (latest)
-* Mozilla Firefox 4
-* Opera (latest)
-* Apple Safari 6+
-* Internet Explorer 8+
+* Chrome
+* Edge
+* Firefox ESR+
+* Internet Explorer 10+
+* Safari 8+
+* Opera
 
-[Normalize.css v1 provides legacy browser
-support](https://github.com/necolas/normalize.css/tree/v1) (IE 6+, Safari 4+),
-but is no longer actively developed.
+
+## Extended details and known issues
+
+Additional detail and explanation of the esoteric parts of normalize.css.
+
+#### `pre, code, kbd, samp`
+
+The `font-family: monospace, monospace` hack fixes the inheritance and scaling
+of font-size for preformatted text. The duplication of `monospace` is
+intentional. [Source](https://en.wikipedia.org/wiki/User:Davidgothberg/Test59).
+
+#### `sub, sup`
+
+Normally, using `sub` or `sup` affects the line-box height of text in all
+browsers. [Source](https://gist.github.com/413930).
+
+#### `select`
+
+By default, Chrome on OS X and Safari on OS X allow very limited styling of
+`select`, unless a border property is set. The default font weight on `optgroup`
+elements cannot safely be changed in Chrome on OSX and Safari on OS X.
+
+#### `[type="checkbox"]`
+
+It is recommended that you do not style checkbox and radio inputs as Firefox's
+implementation does not respect box-sizing, padding, or width.
+
+#### `[type="number"]`
+
+Certain font size values applied to number inputs cause the cursor style of the
+decrement button to change from `default` to `text`.
+
+#### `[type="search"]`
+
+The search input is not fully stylable by default. In Chrome and Safari on
+OSX/iOS you can't control `font`, `padding`, `border`, or `background`. In
+Chrome and Safari on Windows you can't control `border` properly. It will apply
+`border-width` but will only show a border color (which cannot be controlled)
+for the outer 1px of that border. Applying `-webkit-appearance: textfield`
+addresses these issues without removing the benefits of search inputs (e.g.
+showing past searches).
 
 ## Contributing
 
-Please read the CONTRIBUTING.md
+Please read the [contribution guidelines](CONTRIBUTING.md) in order to make the
+contribution process easy and effective for everyone involved.
 
-## Acknowledgements
 
-Normalize.css is a project by [Nicolas Gallagher](https://github.com/necolas),
-co-created with [Jonathan Neal](https://github.com/jonathantneal).
+[changelog-image]: https://img.shields.io/badge/changelog-md-blue.svg?style=flat-square
+[changelog-url]: CHANGELOG.md
+[license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat-square
+[license-url]: LICENSE.md
+[npm-image]: https://img.shields.io/npm/v/normalize.css.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/normalize.css
+[gitter-image]: https://img.shields.io/badge/chat-gitter-blue.svg?style=flat-square
+[gitter-url]: https://gitter.im/necolas/normalize.css
